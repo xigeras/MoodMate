@@ -15,7 +15,7 @@ class User {
 
         //setters
         void setName(string userName);
-        void setAge(int& userAge);
+        void setAge(int userAge);
 
         //getters
         string getName() const;

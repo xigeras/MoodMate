@@ -3,12 +3,12 @@
 
 #include "User.h"
 
-Class TeenUser : public User {
+class TeenUser : public User {
     private: 
-        string schoolName;
+        string* school;
     public:
         TeenUser();
-        TeenUser(string teenName, int teenAge, string school);
+        TeenUser(string teenName, int teenAge, string* school);
 
         void setSchool(string* school);
 

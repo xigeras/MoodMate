@@ -36,6 +36,6 @@ void User::saveToFile(const string& fileName) const {
         return;
     }
 
-    outFile << name << "," << age << endl;
+    outFile << "Name: " << name << ", Age: " << age;
     outFile.close();
 }
