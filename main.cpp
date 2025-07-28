@@ -43,6 +43,7 @@ int main() {
         getline(cin, userNote);
         cout << "Timestamp (dd/mm/yyyy hh:mm AM/PM): ";
         getline(cin, userTimeStamp);
+        cout << "---" << endl;
         moodEntry.setMood(&userMood);
         moodEntry.setNote(userNote);
         moodEntry.setTimeStamp(userTimeStamp);
