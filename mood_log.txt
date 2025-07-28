@@ -17,3 +17,13 @@ Mood Rating: 0
 Note: Finished Exams!!! :D
 Time: 10/16/2025 04:10 PM
 ---
+Mood: Anxious
+Mood Rating: 0
+Note: Studying for exams
+Time: 05/10/2025 09:40 AM
+---
+Mood: Happy
+Mood Rating: 0
+Note: finished exams!
+Time: 05/11/2025 4:10 PM
+---

@@ -29,6 +29,7 @@ int main() {
 
     MoodEntry moodEntries[10];
     int moodCount = 0;
+    int totalRating = 0;
 
 
     cout << "You can log up to 10 moods." << endl;
@@ -49,6 +50,7 @@ int main() {
             --i; // Decrement i to retry this entry
             continue;
         }
+        totalRating += userRating;
         cout << "Note: ";
         getline(cin, userNote);
         cout << "Timestamp (mm/dd/yyyy hh:mm AM/PM): ";
@@ -64,6 +66,16 @@ int main() {
     cout << "\n === Your mood entries === " << endl;
     for (int i = 0; i < moodCount; i++) {
         moodEntries[i].display();
+
+
+    }
+
+    if (moodCount > 0) {
+        double avgRating = static_cast<double>(totalRating) / moodCount;
+        cout << "\nAverage mood rating: " << avgRating << endl;
+    } else {
+        cout << "\nNo mood entries were entered." << endl;
+    
     }
     cout << "\nSaving your profile and mood entries..." << endl;
     teen.saveToFile("user_log.txt");
