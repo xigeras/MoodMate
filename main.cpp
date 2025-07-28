@@ -42,7 +42,7 @@ int main() {
         }
         cout << "Note: ";
         getline(cin, userNote);
-        cout << "Timestamp (dd/mm/yyyy hh:mm AM/PM): ";
+        cout << "Timestamp (mm/dd/yyyy hh:mm AM/PM): ";
         getline(cin, userTimeStamp);
         cout << "---" << endl;
         moodEntries[i].setMood(&userMood);
@@ -50,15 +50,18 @@ int main() {
         moodEntries[i].setTimeStamp(userTimeStamp);
         moodCount++;
     }
-    cout << "Your profile:" << endl;
+    cout << " === Your profile === " << endl;
     teen.display();
-    cout << "\nYour mood entries:" << endl;
+    cout << "\n === Your mood entries === " << endl;
     for (int i = 0; i < moodCount; i++) {
         moodEntries[i].display();
     }
     cout << "\nSaving your profile and mood entries..." << endl;
     teen.saveToFile("user_log.txt");
-    moodEntry.saveToFile("mood_log.txt");
+    for (int i = 0; i < moodCount; i++) {    
+        moodEntries[i].saveToFile("mood_log.txt");
+    }
+
     cout << "Thank you for using MoodMate! Your profile and entries were saved within user_log.txt and mood_log.txt." << endl;
 
     return 0;
