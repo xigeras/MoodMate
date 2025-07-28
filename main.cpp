@@ -27,7 +27,10 @@ int main() {
     teen.setSchool(&school);
 
 
-    MoodEntry moodEntry;
+    MoodEntry moodEntries[10];
+    int moodCount = 0;
+
+
     cout << "You can log up to 10 moods." << endl;
     cout << "To exit, please enter 'exit' as your mood." << endl;
     for (int i = 0; i < 10; ++i) {
@@ -42,11 +45,18 @@ int main() {
         cout << "Timestamp (dd/mm/yyyy hh:mm AM/PM): ";
         getline(cin, userTimeStamp);
         cout << "---" << endl;
-        moodEntry.setMood(&userMood);
-        moodEntry.setNote(userNote);
-        moodEntry.setTimeStamp(userTimeStamp);
+        moodEntries[i].setMood(&userMood);
+        moodEntries[i].setNote(userNote);
+        moodEntries[i].setTimeStamp(userTimeStamp);
+        moodCount++;
     }
-
+    cout << "Your profile:" << endl;
+    teen.display();
+    cout << "\nYour mood entries:" << endl;
+    for (int i = 0; i < moodCount; i++) {
+        moodEntries[i].display();
+    }
+    cout << "\nSaving your profile and mood entries..." << endl;
     teen.saveToFile("user_log.txt");
     moodEntry.saveToFile("mood_log.txt");
     cout << "Thank you for using MoodMate! Your profile and entries were saved within user_log.txt and mood_log.txt." << endl;
