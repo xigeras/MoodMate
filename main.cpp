@@ -40,6 +40,15 @@ int main() {
         if (userMood == "exit") {
             break;
         }
+        cout << "Mood Rating (1-5): ";
+        int userRating;
+        cin >> userRating;
+        cin.ignore(); // Clear the newline character from the input buffer
+        if (userRating < 1 || userRating > 5) {
+            cout << "Invalid rating. Please enter a number between 1 and 5." << endl;
+            --i; // Decrement i to retry this entry
+            continue;
+        }
         cout << "Note: ";
         getline(cin, userNote);
         cout << "Timestamp (mm/dd/yyyy hh:mm AM/PM): ";
