@@ -49,7 +49,7 @@ void MoodEntry::saveToFile(const string& fileName) const {
         return;
     }
 
-    outFile << "\nMood: " << getMood() << "\nNote: " << getNote() << "\nTime: " << getTimeStamp() << "\n---" << endl;
+    outFile << "Mood: " << getMood() << "\nNote: " << getNote() << "\nTime: " << getTimeStamp() << "\n---" << endl;
     outFile.close();
 }
 

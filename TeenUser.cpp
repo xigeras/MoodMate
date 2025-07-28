@@ -36,6 +36,6 @@ void TeenUser::saveToFile(const string& fileName) const {
         return;
     }
 
-    outFile << "Name: " << getName() << ", Age: " << getAge() << ", School: " << school << endl;
+    outFile << "Name: " << getName() << ", Age: " << getAge() << ", School: " << *school << endl;
     outFile.close();
 }

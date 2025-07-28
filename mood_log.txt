@@ -1,10 +1,9 @@
-
 Mood: Anxious
 Note: Studying for exams
 Time: 10/15/2025 09:30 AM
 ---
 
 Mood: Happy
-Note: Finished exams!
+Note: finished exams!
 Time: 10/16/2025 04:10 PM
 ---
