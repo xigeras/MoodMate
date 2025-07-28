@@ -26,7 +26,7 @@ string User::getName() const { return name; }
 int User::getAge() const { return age; }
 
 void User::display() const {
-    cout << "Name: " << name << ", Age: " << age << endl;
+    cout << "Name: " << name << ", Age: " << age;
 }
 
 void User::saveToFile(const string& fileName) const {

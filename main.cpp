@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
+    cout << "Welcome to MoodMate!" << endl;
+    
     TeenUser teen;
-
     // Pass by value
     cout << "Enter your name: ";
     string name;
@@ -24,9 +25,6 @@ int main() {
     string school;
     getline(cin, school);
     teen.setSchool(&school);
-
-    teen.display();
-    teen.saveToFile("user_log.txt");
 
 
     MoodEntry moodEntry;
@@ -48,7 +46,10 @@ int main() {
         moodEntry.setNote(userNote);
         moodEntry.setTimeStamp(userTimeStamp);
     }
-    
-    moodEntry.display();
+
+    teen.saveToFile("user_log.txt");
     moodEntry.saveToFile("mood_log.txt");
+    cout << "Thank you for using MoodMate! Your profile and entries were saved within user_log.txt and mood_log.txt." << endl;
+
+    return 0;
 }
